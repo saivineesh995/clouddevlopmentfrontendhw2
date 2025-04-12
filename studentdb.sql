@@ -9,9 +9,8 @@ CREATE TABLE IF NOT EXISTS students (
     email VARCHAR(100),
     age INT,
     department VARCHAR(50)
-);
+); 
 
--- Insert sample data
 INSERT INTO students (name, email, age, department) VALUES
 ('Alice Johnson', 'alice@example.com', 21, 'Computer Science'),
 ('Bob Smith', 'bob@example.com', 22, 'Mathematics'),

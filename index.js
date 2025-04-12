@@ -6,12 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MySQL connection config
-// triggering azure deployment
+
 const db = mysql.createConnection({
-  host: 'studentdb-demo.mysql.database.azure.com',
-  user: 'mysql_admin',
-  password: 'TempPass@123',
+  host: 'backendhw2.mysql.database.azure.com',
+  user: 'vineesh',
+  password: 'Jagan@123',
   database: 'studentdb',
   port: 3306,
   ssl: {
@@ -31,5 +30,5 @@ app.get('/api/students', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
